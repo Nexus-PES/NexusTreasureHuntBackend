@@ -3,7 +3,7 @@ const qb=express.Router()
 const Pool=require('pg').Pool
 const pool=new Pool({
     user:'postgres',
-    password:'shenoy@72',
+    password:'',
     database:'nexus',
     host:'localhost',
     port:'5432', 
@@ -16,12 +16,14 @@ const questions=[
         id:1,
         question:'What the frick',
         ans:'yes',
+        word:"",
 
     },
     {
         id:2,
         question:'some',
         ans:'no',
+        word:"",
     }
 ]
 
@@ -55,7 +57,7 @@ qb.post('/checkAnswer',async(req,res)=>{
         time = time.getHours()+":"+time.getMinutes()
         try{
             pool.query("UPDATE user_data SET penalty = $1, score = $2,solved_question=$3,time=$5 WHERE id=$4",[penalty,score,solved_question,id,time])
-            res.json({"err":false,"msg":"correct","score":score})
+            res.json({"err":false,"msg":"correct","score":score,"wonWord":questions[questionId-1].word})
         }
         catch(err)
         {

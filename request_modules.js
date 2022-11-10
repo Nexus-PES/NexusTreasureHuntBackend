@@ -82,7 +82,7 @@ fetch(url,{
     else return console.log("Some error",res.json())
 }).then(
     (json)=>{ 
-    console.log(json)   //if correct you will get msg as 'correct' and current score
+    console.log(json)   //if correct you will get msg as 'correct' ,current score,and the wonWord 
     //if already solved msg as 'solved' and current score
     //if ans is wrong the msg as 'wrong' and current score
     }

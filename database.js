@@ -3,7 +3,7 @@ const db = express.Router()
 const Pool = require('pg').Pool
 const pool = new Pool({
     user: 'postgres',
-    password: 'shenoy@72',
+    password: '',
     database: 'nexus',
     host: 'localhost',
     port: '5432',

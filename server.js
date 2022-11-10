@@ -1,5 +1,5 @@
-const global_start_timer=new Date('Nov 5, 2022 15:00:00').getTime()
-const global_end_timer=new Date('Nov 5,2022 16:00:00').getTime()
+const global_start_timer=new Date('Nov 5, 2022 15:00:00').getTime() //change this before starting the server
+const global_end_timer=new Date('Nov 5,2022 16:00:00').getTime() //this also
 
 const express=require("express")
 const database=require("./database")
