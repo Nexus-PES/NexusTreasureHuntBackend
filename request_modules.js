@@ -24,11 +24,11 @@ fetch(url).then(res=>res.json()).then(
     }
 )
 
-//Adding user to the database function not ready yet
+//Adding user to the database 
 url=def_url+"/db/login"
 let data={
-    id:"",
-    teamName:"",
+    id:"5",
+    teamName:"pests",
 }
 fetch(url,{
     method:'POST',
